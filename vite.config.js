@@ -8,6 +8,7 @@ import { fileURLToPath, URL } from 'node:url'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: 'enigma',
   plugins: [
     vue({ 
       template: { transformAssetUrls }
@@ -19,7 +20,6 @@ export default defineConfig({
   ],
   define: { 'process.env': {} },
   resolve: {
-    base: 'enigma',
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     },
